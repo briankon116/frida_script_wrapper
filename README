@@ -1,0 +1,8 @@
+Frida Python Controller:
+    Usage: python3 main.py --app=com.example.com --device=1234567890abcdef [--classes=classes/example.log | --script=scripts/example.js]
+        -app: The package name you would like to hook
+        -device: Serial number of testing device
+        -classes: File listing the classes loaded by the current application. Can be gerated by running this controller using the script "scripts/android_class_enum.js" and piping output to file.
+         This program will iterate through all of the methods listed in the file specified here and will hook each of them to determine which methods are actually called by the application
+        -script: Path to script containing Frida hooking code. The scripts I found useful can be found in the "scripts/" directory. Notice that you may only use the classes flag or script flag
+         one at a time.
